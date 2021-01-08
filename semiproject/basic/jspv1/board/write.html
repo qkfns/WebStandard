@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="/css3/normalize.css">
+    <style>
+        body {margin:0; padding:0}
+        .container {width: 1150px; margin:0 auto;}
+        
+        nav ul{list-style: none; padding:0 0 15px 0;}
+        nav ul li { float: left; padding-left: 150px;}
+        nav hr {clear: both; height: 1px; background: black;}
+        
+        #main {height: 500px;}
+        
+        footer hr {height: 1px; background: black;}
+        footer p { text-align: center}
+        /* 링크에 대한 스타일 정의*/
+        /* 링크색:검정, 밑줄제거*/
+        /* 링크 hover: 빨강, 밑줄표시*/
+        a {font-weight: bold}
+        a:link {color:black; text-decoration:none;}
+        a:visited {color:black; text-decoration:none;}
+        a:active {color:black; text-decoration:none;}
+        a:hover{color:red; text-decoration:underline;}
+    </style>
+    <style>
+        #writefrm { width:750px; margin:75px auto;}
+        #writefrm div{ margin-bottom: 10px;}
+        #writefrm label{ width: 100px; display: inline-block;
+            font-weight: bold; text-align: right;
+            margin-right: 10px; }
+        #writefrm input, textarea{
+            padding: 5px; border: 1px solid black;}
+        input:hover, input:focus, textarea:hover, textarea:focus {      background: mintcream}
+        button { padding: 5px; width: 85px;}
+        
+        textarea { width: 450px; height: 150px;}
+        .dragup {vertical-align: top; margin-top:           5px;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>JSP 프로젝트 v1</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../join.html">회원가입</a></li>
+            <li><a href="../login.html">로그인</a></li>
+            <li><a href="list.html">게시판</a></li>
+            <li><a href="../myinfo.html">회원정보</a></li>
+        </ul>
+        <hr>
+    </nav>
+    <div id="main">
+        <section>
+            <h3>게시판-글쓰기</h3>
+            <form name="writefrm" id="writefrm" method="post">
+                <div><label for="title">제목</label>
+                    <input type="text" name="title" id="title">
+                </div>
+                <div><label for="userid">작성자</label>
+                    <input type="text" name="userid" id="userid">
+                </div>    
+                <div><label for="contents" class="dragup">본문내용</label>
+                    <textarea name="contents" id="contents"></textarea>
+                </div>
+                <div>
+                    <label></label>
+                    <button type="button">입력완료</button>
+                    <button type="reset">다시입력</button>
+                </div>
+            </form>
+        </section>
+
+    </div>
+    <footer>
+        <hr>
+        <p>copyright &copy; 2021. qkfns. All rights reserved.</p>
+    </footer>
+
+</div>    
+
+</body>
+</html>

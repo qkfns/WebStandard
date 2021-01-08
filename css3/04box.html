@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>박스속성</title>
+    <style>
+        #box1 { width: 300px; background: yellowgreen;
+                padding: 50px; border: 5px solid navy;
+                margin: 25px;}
+
+        #box2 { width: 300px; background: yellowgreen;
+            padding: 50px; border: 5px solid navy;
+            margin: 25px; height: 100px;
+            overflow: hidden}
+
+        #box3 { width: 300px; border: 5px solid navy;
+                padding: 25px; /*4개의 방향을 단일값으로 선언*/
+                padding: 25px 25px; /*2개의 방향(상하/좌우)을 단일값으로 선언*/
+                padding: 25px 25px 25px; /* 3개의 방향(상/좌우/하)을 단일값으로 선언*/
+                padding: 5px 20px 45px 65px; /* 4개의 방향(상/우/하/좌)을 단일값으로 선언*/
+
+                padding-top: 5px;
+                padding-right: 20px;
+                padding-bottom: 45px;
+                padding-left: 65px;
+                }
+        #box4 { width: 300px; margin: 10px auto; }
+
+        #box5 { width: 300px;
+                border: 1px solid red; /* 단축식 */
+
+                border-top-style: dotted;
+                border-right-style: dashed;
+                border-bottom-style: double;
+                border-left-style: solid;
+                board-style: dotted dashed double solid;
+
+                border-top-color: yellow;
+                border-right-color: green;
+                border-bottom-color: navy;
+                border-left-color: lime;
+                board-color: yellow green navy lime
+              }
+    </style>
+</head>
+<body>
+<h1>박스모델</h1>
+<div id="box1">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue, lectus eget vulputate tempus, mi nunc ullamcorper erat, condimentum sagittis tellus dolor sed leo. Curabitur facilisis turpis eget lacus sagittis euismod. Phasellus et ligula sed tellus lacinia fermentum tempor id enim. In maximus orci nec eros ullamcorper, a placerat nisi tincidunt. Integer sed lectus accumsan, maximus nisi sed, varius dui. Curabitur maximus, mi in tincidunt congue, ligula velit fermentum purus, non rutrum quam odio ut ante. Vestibulum rhoncus, arcu vel elementum pharetra, velit odio tempus neque, molestie imperdiet lorem metus eget nulla. Donec in ante nec leo fermentum pulvinar. Morbi nec magna ut ipsum tincidunt dictum ac vitae ex. Quisque et congue urna. Pellentesque scelerisque, risus id sollicitudin pharetra, risus ante fringilla erat, eget egestas dolor sapien et magna. In hac habitasse platea dictumst. Nam vitae dictum eros, ut congue metus. Praesent nec semper eros, eget porttitor nisi. Vivamus ultricies elit sed magna viverra, eu varius lacus ornare. Ut pellentesque mattis ultricies.
+</div>
+
+<div id="box2">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue, lectus eget vulputate tempus, mi nunc ullamcorper erat, condimentum sagittis tellus dolor sed leo. Curabitur facilisis turpis eget lacus sagittis euismod. Phasellus et ligula sed tellus lacinia fermentum tempor id enim. In maximus orci nec eros ullamcorper, a placerat nisi tincidunt. Integer sed lectus accumsan, maximus nisi sed, varius dui. Curabitur maximus, mi in tincidunt congue, ligula velit fermentum purus, non rutrum quam odio ut ante. Vestibulum rhoncus, arcu vel elementum pharetra, velit odio tempus neque, molestie imperdiet lorem metus eget nulla. Donec in ante nec leo fermentum pulvinar. Morbi nec magna ut ipsum tincidunt dictum ac vitae ex. Quisque et congue urna. Pellentesque scelerisque, risus id sollicitudin pharetra, risus ante fringilla erat, eget egestas dolor sapien et magna. In hac habitasse platea dictumst. Nam vitae dictum eros, ut congue metus. Praesent nec semper eros, eget porttitor nisi. Vivamus ultricies elit sed magna viverra, eu varius lacus ornare. Ut pellentesque mattis ultricies.
+</div>
+
+<div id="box3">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue, lectus eget vulputate tempus, mi nunc ullamcorper erat, condimentum sagittis tellus dolor sed leo. Curabitur facilisis turpis eget lacus sagittis euismod. Phasellus et ligula sed tellus lacinia fermentum tempor id enim. In maximus orci nec eros ullamcorper, a placerat nisi tincidunt. Integer sed lectus accumsan, maximus nisi sed, varius dui. Curabitur maximus, mi in tincidunt congue, ligula velit fermentum purus, non rutrum quam odio ut ante. Vestibulum rhoncus, arcu vel elementum pharetra, velit odio tempus neque, molestie imperdiet lorem metus eget nulla. Donec in ante nec leo fermentum pulvinar. Morbi nec magna ut ipsum tincidunt dictum ac vitae ex. Quisque et congue urna. Pellentesque scelerisque, risus id sollicitudin pharetra, risus ante fringilla erat, eget egestas dolor sapien et magna. In hac habitasse platea dictumst. Nam vitae dictum eros, ut congue metus. Praesent nec semper eros, eget porttitor nisi. Vivamus ultricies elit sed magna viverra, eu varius lacus ornare. Ut pellentesque mattis ultricies.
+</div>
+
+<div id="box4">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue, lectus eget vulputate tempus, mi nunc ullamcorper erat, condimentum sagittis tellus dolor sed leo. Curabitur facilisis turpis eget lacus sagittis euismod. Phasellus et ligula sed tellus lacinia fermentum tempor id enim. In maximus orci nec eros ullamcorper, a placerat nisi tincidunt. Integer sed lectus accumsan, maximus nisi sed, varius dui. Curabitur maximus, mi in tincidunt congue, ligula velit fermentum purus, non rutrum quam odio ut ante. Vestibulum rhoncus, arcu vel elementum pharetra, velit odio tempus neque, molestie imperdiet lorem metus eget nulla. Donec in ante nec leo fermentum pulvinar. Morbi nec magna ut ipsum tincidunt dictum ac vitae ex. Quisque et congue urna. Pellentesque scelerisque, risus id sollicitudin pharetra, risus ante fringilla erat, eget egestas dolor sapien et magna. In hac habitasse platea dictumst. Nam vitae dictum eros, ut congue metus. Praesent nec semper eros, eget porttitor nisi. Vivamus ultricies elit sed magna viverra, eu varius lacus ornare. Ut pellentesque mattis ultricies.
+</div>
+
+<div id="box5">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue, lectus eget vulputate tempus, mi nunc ullamcorper erat, condimentum sagittis tellus dolor sed leo. Curabitur facilisis turpis eget lacus sagittis euismod. Phasellus et ligula sed tellus lacinia fermentum tempor id enim. In maximus orci nec eros ullamcorper, a placerat nisi tincidunt. Integer sed lectus accumsan, maximus nisi sed, varius dui. Curabitur maximus, mi in tincidunt congue, ligula velit fermentum purus, non rutrum quam odio ut ante. Vestibulum rhoncus, arcu vel elementum pharetra, velit odio tempus neque, molestie imperdiet lorem metus eget nulla. Donec in ante nec leo fermentum pulvinar. Morbi nec magna ut ipsum tincidunt dictum ac vitae ex. Quisque et congue urna. Pellentesque scelerisque, risus id sollicitudin pharetra, risus ante fringilla erat, eget egestas dolor sapien et magna. In hac habitasse platea dictumst. Nam vitae dictum eros, ut congue metus. Praesent nec semper eros, eget porttitor nisi. Vivamus ultricies elit sed magna viverra, eu varius lacus ornare. Ut pellentesque mattis ultricies.
+</div>
+</body>
+</html>
+<!--
+CSS 박스 모델
+모든 HTML 요소는 박스 형태의 영역을 지니고 있음
+이러한 박스는 기본적으로
+내용content, 안쪽여백padding,
+바깥여백margin, 테두리border등으로 구성
+
+브라우저는 박스의 기본크기와 속성, 위치를 기반으로 화면에 자리잡음음
+-->
+<!--
+width/height 속성
+요소의 너비와 높이를 지정할 때 사용
+단, 컨텐츠 영역보다 컨텐츠가 크면 영역을 넘쳐서 표기됨
+사용가능 단위는 px, %
+-->
+<!--
+margin/padding 속성
+컨텐츠를 둘러싸고 있는 4개 방향에 대해 지정가능
+margin,padding은 1개값, 2개값, 3개값, 4개값을 이용해서 지정할 수 있음
+한편, -top, -right, -bottom, -left 속성을 이용해서
+세부적으로 margin이나 padding을 조절할 수 있음
+-->
+<!--
+자동 수평정렬
+margin의 left/right 속성을 auto라고 선언하면
+해당요소를 브라우저 중앙에 배치할 수 있음
+-->
+<!--
+테두리
+border-style, border-color, border-width등의 속성을 가짐
+padding/margin과 마찬가지로 단축 표기식으로 선언할 수 있음
+'border: 선두께 선종류 선색깔' 형태로 정의해야 함
+
+border-style : dotted, dashed, solid, double, ...
+border-width : thin, thick, medium, 수치값, ...
+
+-->

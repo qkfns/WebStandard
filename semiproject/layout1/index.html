@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>레이아웃1</title>
+    <link rel="stylesheet" href="/css3/normalize.css">
+    <link rel="stylesheet" href="layout01.css">
+    <style>
+        /* 공통사항 */
+        body {margin: 0; padding: 0;}
+        ul { list-style: none; padding :0;}
+        
+        /* 레이아웃 */
+        .container {
+            width:1150px; margin:0 auto;}
+        header {height: 125px; }
+        nav { height: 35px; border: 1px solid ;}
+        #main {min-height: 800px; }
+        aside { width: 200px; min-height: 800px;}
+        footer { height: 125px; }
+        /*헤더*/
+        header h1 { width:125px; height:125px; margin: 0;
+        background: purple;
+            float: left;}
+        header ul { float: right;}
+        header li { float: left; padding-right: 10px;}
+        .search {float:left; margin-left: 150px;
+                margin-top: 40px;}
+        .search input { border:5px solid green;
+            height: 30px; width: 500px;}
+        .search button { width: 100px; height: 40px; background : green; color: white;
+        font-size: 16px; font-weight: bold;
+        border: 4px outset green;}
+        
+        /*네비*/
+        nav { background: black; color: white;}
+        nav ul { clear:both; margin-top:8px;}
+        nav li { float: left; padding-left: 75px;
+            font-weight: bold; }
+        
+        /*lnb*/
+        aside { float:left; background: yellow;}
+        
+        .lgmenu li { float: left; font-size: 12px;
+            padding: 10px 3px;}
+        aside hr { clear: both; width: 199px;
+            border: 1px solid indigo;}
+    
+        .atlogin { margin-top: -5px;}
+        .atlogin li{ float: left; font-size: 12px;
+            padding: 7px 10px;}
+        .loginfrm {}
+        .loginfrm li{ float: left}
+        .loginfrm input{ width: 110px; margin: 3px 7px;}
+        .loginfrm button { height: 60px; height: 55px; position: relative; top:-28px;}
+        #notice { clear: both; padding-top:100px;
+                margin: 0px 5px;}
+        #notice h3{background: black; color: white; margin-left: 2px;}
+        
+        #notice li{ font-size:14px; height: 25px; padding-left: 20px; 
+            background: url(/img/free-icon-turtle-3969730.png) no-repeat top left;
+            padding-top: 5px;}
+        
+        .ad { border:1px solid black; height: 300px;
+            background: url(/img/free-icon-cobra-3902607.png);background-size:200px 300px; }
+        
+        /*메인*/
+        #main { width: 946px; float: right;
+            background: orange;}
+        #welcome { background: lightblue;
+            width: 925px; margin: -15px 10px 10px 10px; height: 300px;}
+        .weltext h1{ font-family: Garamond; font-size: 45px; padding-left: 10px; padding-top: 10px}
+        .weltext p { font-weight: 500; width: 450px; padding-left: 30px; }
+        
+        
+        /*게시판-최신정보*/
+        #board { width: 705px; margin: -15px 10px 10px 10px; }
+        #newinfo { width:440px; float:left;
+            margin-left: 10px;
+            background: ghostwhite;}
+        #newinfo h3 {background: black; color:white; padding: 5px 1px; margin: 0;
+        }
+        #newinfo li { height: 35px; 
+            padding-left: 30px; margin-left: 5px;
+            background:url(/img/free-icon-chameleon-3969797.png) no-repeat top left;}
+        #newinfo li:first-child{background: none;
+            padding: 0; margin:0;}
+        #newinfo li:nth-of-type(2){ margin-top:20px }
+        
+        
+        /*게시판 사용기*/
+        #used { width:475px; float:right;
+            margin-right: 10px; height: 404px; 
+            background: ghostwhite;}
+        #used h3 { background: black; color:white; padding: 5px 1px; margin: 0;}
+        #used li { height: 35px; padding-left:30px;
+            margin-left: 5px; background:url(/img/free-icon-snake-3969724.png) no-repeat top left;}
+        #used li:first-child{background: none;
+            padding: 0; margin:0;}
+        #used li:nth-of-type(2){ margin-top:20px }
+        
+        /*갤러리*/
+        #gallary { clear:both;
+                width: 895px; margin:-15px 10px 10px 10px;}
+        #gallary ul { background: gold;}
+            
+        
+        /*푸터*/
+        footer {clear: both; ;}
+        .useinfo {height: 40px;
+            background: black; color: white;
+            }
+        .useinfo ul{ padding-top: 10px;}
+        .useinfo li{ float:left; padding-left:75px; font-weight: bold; font-size:17px;
+        
+        }
+        
+        footer p { text-align: right; font-weight: bold; margin: 40px 10px 0px 0px; }
+        
+        .copyright {clear:both;}
+    </style>
+</head>
+<body>
+<div class="container">
+<header>
+    <h1>로고</h1>
+    <ul>
+        <li>회원정보</li>
+        <li>로그인</li>
+        <li>회원가입</li>
+    </ul>
+    <div class="search"><input type="text">
+        <button type="button">검색</button></div>
+    <div></div>
+</header>
+<nav>
+    <ul>
+        <li>프로젝트개요</li>
+        <li>공지사항</li>
+        <li>게시판</li>
+        <li>자료실</li>
+        <li>갤러리</li>
+        <li>커뮤니티</li>
+        <li>쇼핑몰</li>
+        <li>관리자</li>
+    </ul>
+    
+</nav>
+
+    <aside>
+        <div id="login">
+            <ul class="lgmenu">
+                <li>회원가입</li>
+                <li>아이디찾기</li>
+                <li>비밀번호찾기</li>
+            </ul>
+            <hr>
+            <ul class="atlogin">
+                <li>보안접속 ON  </li>
+                <li><input type="checkbox"> 자동로그인</li>
+            </ul>
+            <ul class=loginfrm>
+                <li><input type="text" placeholder="아이디"></li>
+                <li><input type="password" placeholder="비밀번호"></li>
+                
+                <li><button type="button">로그인</button></li>
+                
+            </ul>
+        </div>
+        <div id="notice">
+            <ul>
+                <lh><h3>공지사항</h3></lh>
+                <li>수지사진은 업로드 환영!</li>
+                <li>아이유사진은 업로드 금지!</li>
+                <li>수지사진은 업로드 환영!</li>
+                <li>아이유사진은 업로드 금지!</li>
+                <li>수지사진은 업로드 환영!</li>
+                <li>아이유사진은 업로드 금지!</li>
+            </ul>
+        </div>
+        <div class="ad">
+        </div>
+    </aside>
+<div id="main">    
+    <section id="welcome">
+        <section class="weltext">
+        <h1>Hello, World!!</h1>
+        <p>Bootstrap UI Framework, Spring Framwork, Spring MVC, Spring WebFlow,Hibernat,EL,JSTL,JSPX,Apache Tiles 등을 이용해서 제작한 프로젝트 사이트입니다.</p>
+        <p>Servlet 3.x,MyBatis 3.x,Struts 2.x, Sitemesh 3.x 등을 이용해서 프로젝트를 완성해 보세요</p>
+        <p>Subversion,Git,Ant,Maven,Mylyn,TRAC등을 이용해서 프로젝트를 관리,배포하고,버그 추적도 해보세요</p>
+        </section>
+    </section>
+    <section id="">
+        <section>
+            <ul id="newinfo">
+                <li><h3>최신정보</h3></li>
+                <li>SKT/번이&lt;갤럭시S3-할원:0원&gt;</li>
+                <li>SKT/번이&lt;갤럭시S3-할원:0원&gt;</li>
+                <li>SKT/번이&lt;갤럭시S3-할원:0원&gt;</li>
+                <li>SKT/번이&lt;갤럭시S3-할원:0원&gt;</li>
+                <li>SKT/번이&lt;갤럭시S3-할원:0원&gt;</li>
+                <li>SKT/번이&lt;갤럭시S3-할원:0원&gt;</li>
+                <li>SKT/번이&lt;갤럭시S3-할원:0원&gt;</li>
+                <li>SKT/번이&lt;갤럭시S3-할원:0원&gt;</li>
+                <li>SKT/번이&lt;갤럭시S3-할원:0원&gt;</li>
+                <li>SKT/번이&lt;갤럭시S3-할원:0원&gt;</li>
+            </ul>
+        </section>
+        <section>
+            <ul id="used">
+                <li><h3>사용기/설치기</h3></li>
+                <li>엑스맨 감상기 [노스포]</li>
+                <li>엑스맨 감상기 [노스포]</li>
+                <li>엑스맨 감상기 [노스포]</li>
+                <li>엑스맨 감상기 [노스포]</li>
+                <li>엑스맨 감상기 [노스포]</li>
+                <li>엑스맨 감상기 [노스포]</li>
+                <li>엑스맨 감상기 [노스포]</li>
+                <li>엑스맨 감상기 [노스포]</li>
+                <li>엑스맨 감상기 [노스포]</li>
+            </ul>
+        </section>
+    </section>
+    <section id="gallary">
+        <h3>이미지 갤러리</h3>
+        <ul>
+            <li><div></div>
+                <p>수지 환영</p>
+            </li>
+            <li><div></div>
+                <p>수지 환영</p>
+            </li>
+            <li><div></div>
+                <p>수지 환영</p>
+            </li>
+            <li><div></div>
+                <p>수지 환영</p>
+            </li>
+            <li><div></div>
+                <p>수지 환영</p>
+            </li>
+            <li><div></div>
+                <p>수지 환영</p>
+            </li>
+        </ul>
+    </section>
+    
+</div>
+<footer>
+    <section class="useinfo">
+        <ul>
+            <li>이용약관</li>
+            <li>개인정보보호방침</li>
+            <li>이메일무단수집거부</li>
+            <li>고객지원</li>
+            <li>권리침해신고</li>
+            <li>광고문의</li>
+        </ul>
+    </section>
+    <section class="copyright">
+        <p>Copyright &copy; 2021. qkfns. All rights reserved. Designed by HTML5. CSS3<br>
+        I Infinite Loop, Cipertino, CA 95014. 개인정보 관리책임자 : 바룬 qkfns@naver.com</p>
+    </section>
+</footer>
+</div>
+
+</body>
+</html>

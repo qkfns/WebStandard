@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>테이블 속성</title>
+    <style>
+        .table1 { border: 1px solid black;
+                  border-collapse: collapse}
+        td, th { border: 1px solid black;
+                padding: 10px; }
+        .table2 { border: 1px solid blue;
+                width: 300px;
+                table-layout: fixed;
+                }
+        .table2 td {white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-align : center}
+        .table3 td { padding: 0; height: 100px;
+                    width: 200px; }
+
+        .table3 tr:first-child td:first-child {vertical-align: top}
+        .table3 tr:first-child td:nth-of-type(2) {vertical-align: bottom}
+        .table3 tr:nth-of-type(2) td:nth-of-type(1) {text-align: center}
+        .table3 tr:nth-of-type(2) td:nth-of-type(2) {text-align: right}
+
+        .table4 { border: 1px solid blue;
+                diplay: table; border-collapse: collapse;
+                width: 300px; height: 100px}
+        .table4 .tr { display: table-row;}
+        .table4 .th { display: table-cell; border:1px solid black;
+                    font-weight: bold; text-align: center;
+                    width: 100px; height: 50px;}
+        .table4 .td { display: table-cell; border:1px solid black;
+                    text-align: center; vertical-align: middle;
+                    width: 100px; height: 50px;}
+
+    </style>
+</head>
+<body>
+<h1>테이블 속성</h1>
+<table class="table1">
+    <tr><th>이름</th><th>국어</th><th>영어</th><th>수학</th></tr>
+    <tr><td>혜교</td><td>99</td><td>98</td><td>99</td></tr>
+    <tr><td>지현</td><td>54</td><td>77</td><td>87</td></tr>
+    <tr><td>수지</td><td>78</td><td>45</td><td>32</td></tr>
+</table>
+<table class="table2">
+    <tr><td>내용</td><td>123546578987654</td></tr>
+</table>
+
+<table class="table3">
+    <tr><td>1234565467</td><td>123546578987654</td><td>1234534645634567</td></tr>
+    <tr><td>1234565467</td><td>123546578987654</td><td>1234534645634567</td></tr>
+    <tr><td>1234565467</td><td>123546578987654</td><td>1234534645634567</td></tr>
+</table>
+
+<div class="table4">
+    <div class="tr">
+        <div class="th">이름</div>
+        <div class="th">국어</div>
+        <div class="th">영어</div>
+    </div>
+    <div class="tr">
+        <div class="td">수지</div>
+        <div class="td">98</div>
+        <div class="td">56</div>
+    </div>
+</div>
+
+
+</body>
+</html>
+<!--
+테이블
+데이터를 2차원 표형태로 나타내는데 사용하는 요소
+
+border-collapse
+    테이블의 테두리를 어떻게 표현할 것인지 정의
+    separate : 셀간 공백 유지
+    collapse : 셀간 공백 제거
+
+border-spacing
+    border-collapse 속성이 separate일때
+    셀간 공백 크기를 정의
+
+table-layout
+    테이블의 내용에 따라 테이블의 크기를 어떻게 표현할 것인지 정의
+    fixed : 고정된 너비로 테이블의 크기를 고정함
+    auto : 내용에 따라 테이블이 자동으로 늘어남
+
+vertical-align
+    테이블의 내용을 위, 아래, 가운데로 정렬하고 싶을때 사용
+    정렬방식은 top, middle, bottom으로 지정
+
+display:table
+    일반적으로 display속성은 인라인 요소나 블록요소로 변환해서
+    출력하는데 사용
+    하지만, display 속성에 table을 지정하면
+    블록요소가 테이블의 성질을 가지게 할 수 있음
+
+    table       : 요소를 테이블 요소처럼 보여줌
+    table-row   : 요소를 테이블의 tr요소처럼 보여줌
+    table-cell  : 요소를 테이블의 td, th 요소처럼 보여줌
+
+-->

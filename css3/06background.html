@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>배경속성</title>
+    <style>
+        .box {width: 300px; height: 200px}
+        #box1 {background-color: orange;}
+        /*#box2 {background-image: url("../img/PS20110900045.jpg"); }*/
+        body { background-image: url("../img/PS20110900045.jpg") ;
+                background-repeat : no-repeat;
+                /*background-size : 75px 75px;*/
+                background-position: center ;
+                background-attachment: fixed;
+                }
+
+    </style>
+</head>
+<body>
+<h1>배경속성</h1>
+<div id="box1" class="box"></div>
+<div id="box2" class="box">민트초고 싫어</div>
+</body>
+</html>
+<!--
+background
+해당 요소의 배경으로 이미지나 색상을 정의할 떄 사용
+
+background-color :배경으로 색상 지정
+background-image : 배경으로 이미지 지정
+    background-repeat : 화면의 크기가 배경이미지보다 크면
+                        배경이미지가 반복적으로 출력됨
+                        반복여부를 repaeta-x, repeat-y, no-repeat로 설정가능
+    background-size : 배경이미지의 크기 설정
+    background-position : 배경이미지의 위치를 설정
+                          설정시 기준위치는 top, left
+                          미리 설정된 위치값 (top,bottom,center,left,right)
+
+    background-attachment : 스크롤시 배경이미지 고정 여부 설정
+-->
+<!--
+배경속성관련 단축표기법
+background : 색상 이미지 반복여부 고정여부 위치
+background : 색상
+background : 이미지
+background : 이미지 반복여부 위치
+background : 이미지 반복여부 고정여부
+-->
