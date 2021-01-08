@@ -6,5 +6,125 @@
 </head>
 <body>
 
+<h2>주소검색</h2>
+<div>
+    <select id="sido"></select>
+
+    <select id="gugun"></select>
+
+    <select id="dong"></select>
+</div>
+<script>
+    // 비동기방식 가져올 데이터의 url 정의
+    let url1 = 'http://localhost:8080/zipcode/sido.jsp'
+    let url2 = 'http://localhost:8080/zipcode/gugun.jsp'
+    let url3 = 'http://localhost:8080/zipcode/dong.jsp'
+
+    // 변수선언
+    let sido = document.getElementById('sido');
+    let gugun = document.getElementById('gugun');
+    let dong = document.getElementById('dong');
+
+    // 시도에 목록 출력
+    // zipcode_2013테이블에서 시도만 추출해서
+    // sido라는 select요소에 option 요소 추가
+    function getsido() {
+        req = new XMLHttpRequest();
+        req.onreadystatechange = function () {
+            if (req.readyState == 4 && req.status == 200) {
+                makesido(req.responseText);
+            }
+        };
+        req.open('get', url1, true);
+        req.send();
+    }
+    getsido();
+
+    function makesido(sd) {
+        let cols = sd.split(',');    // ['서울','부산','','','',.....]
+
+        opt = document.createElement('option');
+        txt = document.createTextNode('-- 시/도 --');
+        opt.appendChild(txt);
+        sido.appendChild(opt);
+
+        for (let col of cols) {
+            if (col == '') continue;
+            opt = document.createElement('option');
+            opt.value =col.trim();
+            txt = document.createTextNode(col.trim());
+            opt.appendChild(txt);
+            sido.appendChild(opt);
+        }
+    }
+
+
+    // 첫번째 select 요소에 이벤트핸들러 등록
+    sido.addEventListener('change', getgugun);
+
+    function getgugun(){
+        req = new XMLHttpRequest();
+        req.onreadystatechange = function () {
+            if (req.readyState == 4 && req.status == 200) {
+                makegu(req.responseText);
+            }
+        };
+        let qry = '?sido=' + sido.value;  // 검색을 위한 질의문자열 생성
+        req.open('get', url2+qry, true);
+        req.send();
+    }
+
+    function makegu(gg) {
+
+        // 이미 등록된 목록은 제거
+        while(gugun.lastChild) {  // 구군목록에 option태그가 있는가?
+            gugun.removeChild(gugun.lastChild);
+        }
+        let cols = gg.split(',');
+
+        opt = document.createElement('option');
+        txt = document.createTextNode('-- /시/군/구 --');
+        opt.appendChild(txt);
+        gugun.appendChild(opt);
+
+        for (let col of cols) {
+            if (col == '') continue;
+            opt = document.createElement('option');
+            opt.value =col.trim();    // option요소에 value 속성 추가
+            txt = document.createTextNode(col.trim());
+            opt.appendChild(txt);
+            gugun.appendChild(opt);
+        }
+    }
+
+</script>
+
 </body>
 </html>
+
+<!--
+우편번호 테이블에서 데이터를 읽어오기 위한 JSP 환경 구축순서
+1. JDK 설치 - amazon correto JDK 8
+   JAVA_HOME 환경변수 설정
+2. tomcat.apache.org에서 Tomcat 8.5.61 다운로드
+   WAS : web application server
+   윈도우 : 64bit window zip
+   c:/Java에 압축해제
+3. 기본 페이지 띄우기
+   bin 아래 startup.bat 실행
+   브라우저에서 127.0.0.1:8080 입력 -> welcome 페이지 확인
+4. 개발용 페이지 띄우기
+   webapps/ROOT 디렉토리에 zipcode폴더 생성후 관련 jsp파일 복사
+   브라우저에서 127.0.0.1:8080/zipcode/jsp파일명
+-->
+<!--
+CORS
+cross-origin resource sharing
+보안상의 이유로 스크립트내에서 실행중인 호스트와 다른
+호스트를 비동기방식으로 불러오지 못하게 제한하는 기법
+
+11ajax.html이 실행되는 호스트 - http://localhost:63342
+비동기로 zipcode/sido/jsp가 실행되는 호스트 - http://localhost:8080
+따라서, 동일한 서버에서 실행되어야 CORS로 인한 제한이 해소됨
+=> 11ajax.html과 sido.jsp를 동일한 서버에 업로드할 것!
+-->
