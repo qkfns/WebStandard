@@ -15,7 +15,8 @@
         .margin30 { margin: 30px 0; }
         .margin100 { margin: 100px 0 30px 0;}
         .margin1050 { margin: 0px 30px 30px 50px;}
-        .igborder { border-radius: 0;
+        .igborder { border-radius: 0;}
+        .pushzip { margin-top:25px}
 
         .breadcrumb-item+.breadcrumb-item::before {
             content: url(../glyphicons_223_thin_right_arrow.png);
@@ -41,7 +42,7 @@
     <nav class="nav navbar-expand navbar-dark bg-dark">
         <ul class="navbar-nav nav-fill w-100">
             <li class="nav-item"><a class="nav-link" href="../intro.html">프로젝트 소개</a></li>
-            <li class="nav-item active"><a class="nav-link">회원가입</a></li>
+            <li class="nav-item active"><a class="nav-link disabled">회원가입</a></li>
             <li class="nav-item"><a class="nav-link" href="../board/list.html">게시판</a></li>
             <li class="nav-item"><a class="nav-link" href="../pds/list.html">자료실</a></li>
             <li class="nav-item"><a class="nav-link" href="../gallery/list.html">갤러리</a></li>
@@ -63,7 +64,7 @@
                 <button type="button" class="btn btn-success btn-sm" disabled>
                     실명확인</button></li>
             <li class="breadcrumb-item active">
-                <button type="button" class="btn btn-light btn-sm" disabled>
+                <button type="button" class="btn btn-success btn-sm" disabled>
                     정보입력</button></li>
             <li class="breadcrumb-item active">
                 <button type="button" class="btn btn-light btn-sm" disabled>
@@ -257,6 +258,66 @@
                 <button type="button" class="btn btn-success">
                     아이디/비밀번호찾기</button>
             </div><!-- 푸터 -->
+        </div>
+    </div>
+</div>
+
+<!-- 우편번호 찾기 모달-->
+<div id="zipcode" class="modal" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">우편번호 찾기</h3>
+                <button type="button" data-dismiss="modal"
+                        class="btn btn-light">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="zipfrm">
+                    <div class="form-group row justify-content-center pushzip">
+                        <label for="dong" class="text-danger text-right"
+                        style="margin-top: -4.5px">
+                            검색하실 주소의<br> 동 이름을 입력하세요
+                        </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" id="dong" name="dong" class="form-control border-primary col-4">
+                        &nbsp;&nbsp;
+                        <span>
+                        <button type="button" id="findbtn" class="btn btn-primary">
+                            <i class="bi bi-search"></i>검색하기</button>
+                        </span>
+                    </div>
+                    <div class="form-group row justify-content-center">
+                        <div>
+                            <hr>
+                            <p class="text-danger">지역의 읍/면/동의 이름을 공백없이 입력하신 후,
+                                [검색하기] 버튼을 클릭하세요</p>
+                            <select id="addrlist" name="addrlist"
+                                    class="form-control" size="10">
+                                <option>123-456 서울 종로구 창신동</option>
+                                <option>123-456 서울 종로구 창신동</option>
+                                <option>123-456 서울 종로구 창신동</option>
+                                <option>123-456 서울 종로구 창신동</option>
+                                <option>123-456 서울 종로구 창신동</option>
+                                <option>123-456 서울 종로구 창신동</option>
+                                <option>123-456 서울 종로구 창신동</option>
+                                <option>123-456 서울 종로구 창신동</option>
+                                <option>123-456 서울 종로구 창신동</option>
+                                <option>123-456 서울 종로구 창신동</option>
+                                <option>123-456 서울 종로구 창신동</option>
+                                <option>123-456 서울 종로구 창신동</option>
+                                <option>123-456 서울 종로구 창신동</option>
+                                <option>123-456 서울 종로구 창신동</option>
+                                <option>123-456 서울 종로구 창신동</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer justify-content-end">
+                <button type="button" class="btn btn-danger">
+                    <i class="bi bi-check2-circle"></i>선택하고 닫기
+                </button>
+            </div>
         </div>
     </div>
 </div>
