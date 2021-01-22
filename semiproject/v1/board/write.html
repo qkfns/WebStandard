@@ -13,13 +13,17 @@
     <style>
         .fatdiv { padding: 15px; }
         .margin30 { margin: 30px 0; }
+        .margin1050 { margin: 0px 30px 30px 50px;}
+        .bidragup { position:relative; top:-3px;}
+        th:nth-child(2), td:nth-child(2) { text-align: left;}
+        .tblines { border-top: 3px solid black; border-bottom: 3px solid black; !important;}
     </style>
 </head>
 <body>
 <div class="container">
     <header class="row">
         <div class="col-6">
-            <h1>Lorem Inpsum</h1>
+            <h1><a href="../index.html">Lorem Inpsum</a></h1>
         </div>
         <div class="col-6 text-right">
             <h1>
@@ -32,17 +36,61 @@
 
     <nav class="nav navbar-expand navbar-dark bg-dark">
         <ul class="navbar-nav nav-fill w-100">
-            <li class="nav-item"><a class="nav-link" href="intro.html">프로젝트 소개</a></li>
-            <li class="nav-item"><a class="nav-link" href="join/agree.html">회원가입</a></li>
+            <li class="nav-item"><a class="nav-link" href="../intro.html">프로젝트 소개</a></li>
+            <li class="nav-item"><a class="nav-link" href="../join/agree.html">회원가입</a></li>
             <li class="nav-item"><a class="nav-link" href="board/list.html">게시판</a></li>
-            <li class="nav-item"><a class="nav-link" href="pds/list.html">자료실</a></li>
-            <li class="nav-item"><a class="nav-link" href="gallery/list.html">갤러리</a></li>
-            <li class="nav-item"><a class="nav-link" href="admin.html">관리자</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pds/list.html">자료실</a></li>
+            <li class="nav-item"><a class="nav-link" href="../gallery/list.html">갤러리</a></li>
+            <li class="nav-item"><a class="nav-link" href="../admin.html">관리자</a></li>
         </ul>
     </nav>
 
-    <div id="main margin30">
-        
+    <div id="main">
+        <div class="margin30">
+            <h3><i class="bi bi-chat-dots-fill bidragup"></i> 게시판</h3>
+            <hr>
+        </div>
+
+        <form id="newbdfrm" >
+            <div class="row margin1050">
+                <div class="col-6">
+                    <h4><i class="bi bi-plus-circle-fill bidragup"></i> 새글쓰기</h4>
+                </div>
+                <div class="col-6 text-right">
+                    <button type="button" id="listbdbtn"
+                            class="btn btn-light">
+                        <i class="bi bi-card-list bidragup"></i> 목록으로</button>
+                </div>
+            </div> <!-- 상단버튼 -->
+            <div class="card card-body bg-light margin1050 tblines">
+                <div class="form-group row">
+                    <label for="title" class="col-form-label col-2 text-right">제목</label>
+                    <input type="text" id="title" name="title" class="form-control col-9">
+
+                </div>
+                <div class="form-group row">
+                    <label for="contents" class="col-form-label col-2 text-right">본문내용</label>
+                    <textarea type="text" id="contents" name="contents"
+                              class="form-control col-9" rows="15"></textarea>
+                </div>
+                <div class="row">
+                    <label class="col-2 text-right">자동가입방지</label>
+                    <img src="../google_recaptcha.gif" width="40%" height="40%" style="margin-left: -5px">
+                </div>
+            </div> <!-- 새글쓰기 폼 -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <button type="button" id="newbdbtn"
+                            class="btn btn-primary">
+                        <i class="bi bi-check"></i>입력완료</button>
+                    <button type="button" id="cancelbtn"
+                            class="btn btn-primary">
+                        <i class="bi bi-x"></i>취소하기</button>
+                </div> <!-- 하단버튼-->
+            </div>
+        </form>
+
+
     </div>
 
     <footer class="row margin30">

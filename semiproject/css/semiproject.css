@@ -1,0 +1,13 @@
+.fatdiv { padding: 15px; }
+.margin30 { margin: 30px 0; }
+.margin100 { margin: 100px 0 30px 0;}
+.margin1050 { margin: 0px 30px 30px 50px;}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: url(../v1/glyphicons_223_thin_right_arrow.png);
+    margin-top: 5px;
+}
+.bidragup { position:relative; top:-3px;}
+.tblines { border-top: 3px solid black; border-bottom: 3px solid black; !important;}
+.pushtop50 { margin-top: 50px;}
+.tblines2 { border-bottom: 3px solid black;}

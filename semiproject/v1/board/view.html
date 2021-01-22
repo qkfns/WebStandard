@@ -13,13 +13,27 @@
     <style>
         .fatdiv { padding: 15px; }
         .margin30 { margin: 30px 0; }
+        .margin1050 { margin: 0px 30px 30px 50px;}
+        .bidragup { position:relative; top:-3px;}
+        .tblines { border-top: 3px solid black; border-bottom: 3px solid black; !important;}
+        .pushtop50 { margin-top: 50px;}
+        .tblines2 { border-bottom: 3px solid black;}
+        .tbbg1 { background: #dff0f8}
+        .tbbg2 { background: #ccff99}
+        .tbbg3 { background: #ffffcc}
+        .cmtbg1 { background: yellow; padding:5px 0;}
+        .cmtbg2 { background: lime; padding: 5px 0;}
+
+        .pushright { float: right;}
+        .tbwide td:first-child {width: 25%}
+
     </style>
 </head>
 <body>
 <div class="container">
     <header class="row">
         <div class="col-6">
-            <h1>Lorem Inpsum</h1>
+            <h1><a href="../index.html">Lorem Inpsum</a></h1>
         </div>
         <div class="col-6 text-right">
             <h1>
@@ -32,17 +46,115 @@
 
     <nav class="nav navbar-expand navbar-dark bg-dark">
         <ul class="navbar-nav nav-fill w-100">
-            <li class="nav-item"><a class="nav-link" href="intro.html">프로젝트 소개</a></li>
-            <li class="nav-item"><a class="nav-link" href="join/agree.html">회원가입</a></li>
+            <li class="nav-item"><a class="nav-link" href="../intro.html">프로젝트 소개</a></li>
+            <li class="nav-item"><a class="nav-link" href="../join/agree.html">회원가입</a></li>
             <li class="nav-item"><a class="nav-link" href="board/list.html">게시판</a></li>
-            <li class="nav-item"><a class="nav-link" href="pds/list.html">자료실</a></li>
-            <li class="nav-item"><a class="nav-link" href="gallery/list.html">갤러리</a></li>
-            <li class="nav-item"><a class="nav-link" href="admin.html">관리자</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pds/list.html">자료실</a></li>
+            <li class="nav-item"><a class="nav-link" href="../gallery/list.html">갤러리</a></li>
+            <li class="nav-item"><a class="nav-link" href="../admin.html">관리자</a></li>
         </ul>
     </nav>
 
-    <div id="main margin30">
-        
+    <div id="main">
+        <div class="margin30">
+            <h3><i class="bi bi-chat-dots-fill bidragup"></i> 게시판</h3>
+            <hr>
+        </div>
+
+        <div class="row margin1050">
+            <div class="col-6">
+                <button type="button" id="prevbtn"
+                        class="btn btn-light">
+                    <i class="bi bi-chevron-left bidragup"></i> 이전게시물</button>
+                <button type="button" id="nextbtn"
+                        class="btn btn-light">
+                    <i class="bi bi-chevron-right bidragup"></i> 다음게시물</button>
+            </div>
+            <div class="col-6 text-right">
+                <button type="button" id="newbdbtn"
+                        class="btn btn-light">
+                    <i class="bi bi-plus-circle-fill bidragup"></i> 새글쓰기</button>
+            </div>
+        </div> <!-- 버튼들 -->
+        <div class="row margin1050 ">
+            <table class="table tblines">
+                <tr><th colspan="2" class="tblines2 tbbg1"><h2>Praesent quis magna vitae nuc malesuada tempor a pretium metus</h2></th></tr> <!-- 제목 -->
+                <tr class="tbbg2"><td>qkfns</td><td class="text-right">2021.01.25 12:12:12 / 45 / 256</td></tr> <!-- 작성자,작성일,조회수 -->
+                <tr class="tbbg3"><td colspan="2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                    Nam sagittis feugiat sapien id convallis.<br>
+                    Vestibulum pulvinar urna felis, eu suscipit mauris semper quis.<br>
+                    Morbi malesuada risus in tempus eleifend.<br>
+                    In sed maximus nisi, a vestibulum elit. Mauris id dolor quam.<br>
+                    Donec imperdiet laoreet tortor sed interdum.<br>
+                    Nulla accumsan eros et purus pharetra, in egestas massa dignissim.<br>
+                    Sed sit amet erat ornare dui molestie auctor nec sed nisl.
+                </td></tr> <!-- 본문 -->
+            </table>
+        </div> <!-- 본문글 -->
+        <div class="row margin1050">
+            <div class="col-6">
+                <button type="button" id="upbdbtn"
+                        class="btn btn-warning">
+                    <i class="bi bi-pencil-square bidragup"></i> 수정하기</button>
+                <button type="button" id="rmbdbtn"
+                        class="btn btn-danger">
+                    <i class="bi bi-trash-fill bidragup"></i> 삭제하기</button>
+            </div>
+            <div class="col-6 text-right">
+                <button type="button" id="listbdbtn"
+                        class="btn btn-light">
+                    <i class="bi bi-card-list bidragup"></i> 목록으로</button>
+            </div>
+        </div> <!-- 버튼들 -->
+        <div class="row margin1050">
+            <h3><i class="bi bi-chat-square-dots-fill bidragup"></i> 나도 한마디</h3>
+            <table class="table tblines tbwide">
+                <tr><td><h4>qkfns</h4></td>
+                    <td>
+                        <div class="cmtbg1">2021-01-30 15:15:15</div>
+                        <p>Morbi malesuada risus in tempus eleifend.<br>
+                            In sed maximus nisi, a vestibulum elit. Mauris id dolor quam.<br></p><!-- 댓글 -->
+                        <ul class="list-unstyled">
+                            <li>
+                                <div class="cmtbg2"><span class="h4">zzyzzy</span><span class="pushright">2021-01-30 16:16:16</span></div>
+                                <p>Nulla accumsan eros et purus pharetra, in egestas massa dignissim.<br>
+                                    Sed sit amet erat ornare dui molestie auctor nec sed nisl.</p>
+                            </li>
+                        </ul> <!-- 댓글의 댓글 -->
+                    </td></tr>
+                <tr><td><h4>qkfns</h4></td>
+                    <td>
+                        <div class="cmtbg1">2021-01-30 15:15:15</div>
+                        <p>Morbi malesuada risus in tempus eleifend.<br>
+                            In sed maximus nisi, a vestibulum elit. Mauris id dolor quam.<br></p><!-- 댓글 -->
+                    </td></tr>
+                <tr><td><h4>qkfns</h4></td>
+                    <td>
+                        <div class="cmtbg1">2021-01-30 15:15:15</div>
+                        <p>Morbi malesuada risus in tempus eleifend.<br>
+                            In sed maximus nisi, a vestibulum elit. Mauris id dolor quam.<br></p><!-- 댓글 -->
+                    </td></tr>
+                <tr><td><h4>qkfns</h4></td>
+                    <td>
+                        <div class="cmtbg1">2021-01-30 15:15:15</div>
+                        <p>Morbi malesuada risus in tempus eleifend.<br>
+                            In sed maximus nisi, a vestibulum elit. Mauris id dolor quam.<br></p><!-- 댓글 -->
+                    </td></tr>
+
+            </table>
+        </div> <!-- 댓글목록 -->
+        <div class="row margin1050">
+            <form id="replyfrm" class="card card-body bg-light">
+                <div class="form-group row justify-content-center">
+                    <label class="pushtop50 text-primary font-weight-bold">로그인하세요</label>&nbsp;
+                    <textarea id="comment" rows="5" class="form-control col-7"></textarea>&nbsp;
+                    <span><button id="bdcmtbtn" class="btn btn-dark pushtop50">
+                        <i class="bi bi-chat-text-fill bidragup"></i> 댓글쓰기</button></span>
+                </div>
+            </form>
+        </div> <!-- 댓글폼 -->
+
     </div>
 
     <footer class="row margin30">
